@@ -20,7 +20,17 @@ a {
 a:hover {
   color: #6633ff;
 }
+/*Header styles*/
 
+h3 {
+  text-shadow: -5px -8px 5px #222;
+}
+/*Paragraph styles*/
+
+p:first-letter {
+  font-size: 20px;
+  font-weight: bold;
+}
 /* Section Styles */
 
 .main-nav {
@@ -70,16 +80,20 @@ header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 30%;
   border: 3px solid white;
   transition: all .5s;
+  box-shadow: 7px 7px 1px rgba(255,255,255,1);
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.5) rotate(-5deg);
 }
 .column-image {
-  max-width: 500px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 7px 7px 1px rgba(250,25,25,0.5);
 }
+
 .tag {
   background-color: #efefef;
   color: black;
@@ -87,7 +101,11 @@ header .profile-image:hover {
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+}
+.tag:hover {
+  color: pink;
+  background: brown;
+}
 .center {
   margin-top: 120px;
 }
@@ -109,6 +127,14 @@ header .profile-image:hover {
   border-color: #ff99ff;
 }
 
+.dum-back {
+  background: linear-gradient(#ffa949,transparent);
+  /*background-size: cover;*/
+  box-shadow: 15px 15px 10px rgba(0,0,0,.8);
+  border-radius: 5px;
+  padding: 5px;
+}
+
 ul.skills {
   padding: 0;
   text-align: center;
@@ -125,6 +151,14 @@ ul.skills {
 
 .skills li:nth-child(odd) {
   background: #0399ff;
+}
+
+.skills li:first-child {
+  background: violet;
+}
+
+.skills li:last-child {
+  background: red;
 }
 
 footer {
