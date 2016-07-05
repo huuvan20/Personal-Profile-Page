@@ -76,7 +76,7 @@ header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
-  border-radius: 30%;
+  border-radius: 100%;
   border: 3px solid white;
   transition: all .5s;
   box-shadow: 7px 7px 1px rgba(255,255,255,1);
