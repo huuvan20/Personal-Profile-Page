@@ -25,13 +25,14 @@ a:hover {
 h3 {
   text-shadow: 5px 5px 2px green;
 }
+
 /*Paragraph styles*/
 
 /* Section Styles */
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: white;
   min-height: 30px;
   padding: 10px;
   position: fixed;
@@ -49,7 +50,7 @@ h3 {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: #00a961;
 }
 
 .nav li {
@@ -59,7 +60,7 @@ h3 {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: #00a961;
 }
 
 header {
@@ -77,12 +78,11 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 3px solid white;
+  border: 1.5px solid white;
   transition: all .5s;
-  box-shadow: 7px 7px 1px rgba(255,255,255,1);
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(-5deg);
+  transform: scale(1.1);
 }
 .column-image {
   max-width: 100%;
@@ -91,23 +91,19 @@ header .profile-image:hover {
 }
 
 .tag {
-  background-color: #efefef;
-  color: black;
+  background-color: white;
+  color: #00a961;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
 }
 .tag:hover {
-  color: pink;
-  background: brown;
+  background: #00a961;
+  color: white;
 }
 .center {
   margin-top: 120px;
-}
-.location {
-  background-color: #222;
-  color: yellow;
 }
 
 .flex p:first-letter {
@@ -133,6 +129,43 @@ header .profile-image:hover {
   border-color: #ff99ff;
 }
 
+.center {
+  max-width: 500px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.number {
+  background: #4EBBB5;
+  color: white;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 7px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,.2);
+  border-radius: 100%;
+}
+
+time {
+  font-style: italic;
+  font-size: 0.9em;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  color: #00a961;
+}
+
+label {
+  font-size: 1.15em;
+  font-weight: bold;
+}
+
 .dum-back {
   background: linear-gradient(#ffa949,transparent);
   /*background-size: cover;*/
@@ -141,34 +174,37 @@ header .profile-image:hover {
   padding: 5px;
 }
 
-ul.skills {
+ul.projects {
   padding: 0;
   text-align: center;
 }
 
-.skills li {
+.projects li {
   border-radius: 6px;
   display: inline-block;
   background: #ff9904;
-  color: white;
   padding: 5px 10px;
   margin: 2px;
   transition: all .5s;
 }
 
-.skills li:hover{
-  transform: scale(1.2) rotate(5deg);
+.projects li a {
+  color: white;
 }
 
-.skills li:nth-child(odd) {
+.projects li:hover{
+  transform: scale(1.1) rotate(1deg);
+}
+
+.projects li:nth-child(odd) {
   background: #0399ff;
 }
 
-.skills li:first-child {
+.projects li:first-child {
   background: violet;
 }
 
-.skills li:last-child {
+.projects li:last-child {
   background: red;
 }
 
@@ -229,6 +265,11 @@ a.social:hover {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
+  }
+
+  .center {
+      max-width: 1100px;
+      margin: auto;
   }
 
   header {
