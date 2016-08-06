@@ -15,9 +15,13 @@ body {
 
 a {
   text-decoration: none;
+  color: #222;
+}
+
+.nav a {
   color: silver;
 }
-a:hover {
+.nav a:hover {
   color: green;
 }
 
@@ -107,6 +111,11 @@ header .profile-image:hover {
   margin-top: 120px;
 }
 
+.flex {
+  max-width: 585px;
+  margin: auto;
+}
+
 .flex p:first-letter {
   font-size: 20px;
   font-weight: bold;
@@ -117,9 +126,8 @@ header .profile-image:hover {
 }
 
 .card {
-  margin: 30px;
+  margin: 2.5%;
   padding: 20px 40px 40px;
-  max-width: 500px;
   text-align: left;
   background: #fff;
   border-bottom: 4px solid #ccc;
@@ -128,10 +136,6 @@ header .profile-image:hover {
 }
 .card:hover {
   border-color: #ff99ff;
-}
-
-.center {
-  max-width: 500px;
 }
 
 legend {
@@ -167,18 +171,32 @@ label {
   font-weight: bold;
 }
 
-.link_there {
+.link_there, .current-job {
 	font-size: 0.8em;
 	font-style: italic;
-	font-weight: normal;
 	color: white;
+  border-radius: 6px;
+  background: #ff9904;
+  padding: 5px 10px;
+  margin: 2px;
+  transition: all .5s;
+}
+
+.current-job {
+  background: #66FF00;  
 }
 
 /*Pie chart styles*/
+
+.pie-chart {
+  display: flex;
+}
+
 .skills {
   position: relative;
   height: 13em;
   margin-top: 1.5em;
+  width: 50%;
 }
 
 /*Lightbox styles*/
@@ -231,7 +249,7 @@ label {
 */
 	.pie:nth-of-type(1):BEFORE,
 	.pie:nth-of-type(1):AFTER {
-		background-color:lightblue;
+		background-color: #C9FFE5;
 	}
 
 	.pie:nth-of-type(2):AFTER,
@@ -240,7 +258,7 @@ label {
 	}
 	.pie:nth-of-type(3):AFTER,
 	.pie:nth-of-type(3):BEFORE {
-		background-color:red;	
+		background-color: pink;	
 	}
 	.pie:nth-of-type(4):AFTER,
 	.pie:nth-of-type(4):BEFORE {
@@ -252,7 +270,7 @@ label {
   }
   .pie:nth-of-type(6):AFTER,
   .pie:nth-of-type(6):BEFORE {
-    background-color:black;  
+    background-color:silver;  
   }
 /*
   now rotate each piece based on their cumulative starting
@@ -343,6 +361,12 @@ label {
     transform:rotate(33deg);
   }
 
+.skills-labels {
+  width: 50%;
+  padding-top: 2em;
+  padding-left: 5em;
+}
+
 .skills-labels li {
   list-style-type: none;
   margin-bottom: 2px;
@@ -356,7 +380,7 @@ span.labels {
 }
 
 .label-HTML {
-  background: lightblue;
+  background: #C9FFE5;
 }
 
 .label-CSS {
@@ -364,7 +388,7 @@ span.labels {
 }
 
 .label-Javascript {
-  background: red;
+  background: pink;
 }
 
 .label-MySQL {
@@ -376,7 +400,7 @@ span.labels {
 }
 
 .label-Wordpress {
-  background: black;
+  background: silver;
 }
 
 .dum-back {
@@ -387,39 +411,49 @@ span.labels {
   padding: 5px;
 }
 
-ul.projects {
+
+
+.center legend {
+  margin-bottom: 1em;
+}
+
+.projects {
+  list-style-type: none;
+  margin: 0;
   padding: 0;
-  text-align: center;
 }
 
-.projects li,
-.link_there {
-  border-radius: 6px;
-  display: inline-block;
-  background: #ff9904;
-  padding: 5px 10px;
-  margin: 2px;
-  transition: all .5s;
+.projects div {
+  border: 1px solid #ccc;
+  border-bottom: 4px solid #ccc;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
 }
 
-.projects li a {
-  color: white;
+.projects div:hover {
+  border-color: lightgreen;
+  box-shadow: 0 0 5px 1px rgba(60,144,190,0.13);
+  -webkit-box-shadow: 0 0 5px 1px rgba(60,144,190,0.13);
 }
 
-.projects li:hover{
-  transform: scale(1.1) rotate(1deg);
+.projects label {
+  display: block;
+  padding: 1em;
+  padding-bottom: 0;
 }
 
-.projects li:nth-child(odd) {
-  background: #0399ff;
+.projects p {
+  margin: 5px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  font-size: 0.95em;
 }
 
-.projects li:first-child {
-  background: violet;
-}
-
-.projects li:last-child {
-  background: red;
+.projects img {
+  width: 100%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom: 3.5px solid lightgreen;
 }
 
 footer {
@@ -470,20 +504,24 @@ a.social:hover {
 }
 
 /* Styles for larger screens */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1024px) {
   
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex; 
+    flex-flow: row wrap;
+    max-width: 1300px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 45%;
   }
 
   .center {
-      max-width: 1100px;
-      margin: auto;
+    width: 100%;
   }
 
   header {
@@ -491,7 +529,7 @@ a.social:hover {
   }
 
   .nav {
-    max-width: 1200px;
+    max-width: 1300px;
     padding: 0 30px;
   }
 
@@ -504,11 +542,27 @@ a.social:hover {
     line-height: 1.6em;
   }
 
+  .projects {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .projects div {
+    width: 30%;
+    margin: calc(10% / 6);
+  }
+
   footer {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
   }
 
+}
+
+@media print {
+  .main-nav {
+    display: none;
+  }
 }
 
