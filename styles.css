@@ -180,6 +180,7 @@ label {
   padding: 5px 10px;
   margin: 2px;
   transition: all .5s;
+  display: inline-block;
 }
 
 .current-job {
@@ -187,10 +188,6 @@ label {
 }
 
 /*Pie chart styles*/
-
-.pie-chart {
-  display: flex;
-}
 
 .skills {
   position: relative;
@@ -362,7 +359,7 @@ label {
   }
 
 .skills-labels {
-  width: 50%;
+  /*width: 50%;*/
   padding-top: 2em;
   padding-left: 5em;
 }
@@ -550,6 +547,15 @@ a.social:hover {
   .projects div {
     width: 30%;
     margin: calc(10% / 6);
+  }
+
+  /*Pie chart styles*/
+  .pie-chart {
+    display: flex;
+  }
+
+  .skills-labels {
+    width: 50%;
   }
 
   footer {
