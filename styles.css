@@ -198,7 +198,7 @@ label {
 
 /*Lightbox styles*/
 .lb-img {
-  width: 50%;
+  width: 100%;
 }
 
 /* 
@@ -537,6 +537,10 @@ a.social:hover {
 
   main p {
     line-height: 1.6em;
+  }
+
+  .lb-img {
+    width: 50%;
   }
 
   .projects {
